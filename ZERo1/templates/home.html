@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Risk Predictor - Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #05213f;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 40px 20px;
+            background: #f4f4f9;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .info-grid div {
+            flex: 1;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 40px 20px;
+            background: white;
+        }
+
+        .mission h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            flex: 1;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div><a href="/">DiagnoSure</a></div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/predict">Predict</a>
+            <a href="/results">Results</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <video autoplay loop muted>
+            <source src="/static/background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>DiagnoSure</h1><br><br>
+        <p></p><br><br>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <h2>How We Can Help</h2>
+        <div class="info-grid">
+            <div>
+                <h3>Early Diagnosis</h3>
+                <p>Identify potential health risks early.</p>
+            </div>
+            <div>
+                <h3>Personalized Insights</h3>
+                <p>Tailored predictions for individual needs.</p>
+            </div>
+            <div>
+                <h3>Community Health</h3>
+                <p>Promote better healthcare outcomes for all.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission">
+        <h2>Our Mission & Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="/static/team1.jpg" alt="Team Member 1">
+                <p>Rishi K P</p>
+            </div>
+            <div class="team-member">
+                <img src="/static/team2.jpg" alt="Team Member 2">
+                <p>Sathwik Padmanabha</p>
+            </div>
+            <div class="team-member">
+                <img src="/static/team3.jpg" alt="Team Member 3">
+                <p>Shreyas Rayeli</p>
+            </div>
+            <div class="team-member">
+                <img src="/static/team4.jpg" alt="Team Member 4">
+                <p>Surya G Gowda</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>VVCE 2nd Stage Gokulum, Mysuru , 570009 | Email: contact@healthpredictor.com | Phone: +123-456-7890</p>
+    </footer>
+</body>
+</html>

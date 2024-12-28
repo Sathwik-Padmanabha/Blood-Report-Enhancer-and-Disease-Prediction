@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Results - Disease Risk Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Results</h1>
+
+        <div class="section">
+            <h2>Disease Risk Probabilities</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="data:image/png;base64,{{ plot_url }}" alt="Disease Risk Probabilities">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Comparison with Healthy Population</h2>
+            <div class="grid">
+                {% for param, img in comparisons.items() %}
+                    <div class="card">
+                        <h3>{{ param }}</h3>
+                        <img src="data:image/png;base64,{{ img }}" alt="{{ param }} Comparison">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
